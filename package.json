@@ -1,0 +1,15 @@
+{
+  "name": "openapi-confluence-converter",
+  "type": "module",
+  "scripts": {
+    "repomix": "repomix",
+    "run": "node src/index.mjs"
+  },
+  "dependencies": {
+    "yaml": "^2.4.1"
+  },
+  "devDependencies": {
+    "repomix": "^1.13.1",
+    "typescript": "^5.0.0"
+  }
+}

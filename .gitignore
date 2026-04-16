@@ -1,0 +1,8 @@
+node_modules/
+.idea/
+.vscode/
+*.log
+confluence-output.html
+output.html
+repomix-output.md
+import_gemini.mjs

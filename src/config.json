@@ -1,0 +1,9 @@
+{
+  "customColumns": [
+    {
+      "header": "User Stories (x-story)",
+      "path": "x-story",
+      "type": "array"
+    }
+  ]
+}
