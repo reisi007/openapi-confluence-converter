@@ -1,6 +1,6 @@
-import { findLineNumber, getValueByPath } from './utils.mjs';
+import { getValueByPath } from './utils.mjs';
 
-export function parseOpenAPI(yamlContent, yamlModule, gitViewUrl, config) {
+export function parseOpenAPI(yamlContent, yamlModule, config) {
     const parsedData = yamlModule.parse(yamlContent);
     if (!parsedData || !parsedData.paths) throw new Error('Invalid OpenAPI schema: missing "paths" object');
     const rows = [];
@@ -8,14 +8,13 @@ export function parseOpenAPI(yamlContent, yamlModule, gitViewUrl, config) {
     for (const [routePath, methods] of Object.entries(parsedData.paths)) {
         for (const [method, operation] of Object.entries(methods)) {
             if (['summary', 'description', 'parameters', 'servers'].includes(method.toLowerCase())) continue;
-            const opId = operation.operationId || 'N/A';
+            
+            const opId = operation.operationId ? String(operation.operationId) : '';
             
             const row = {
                 method: method.toUpperCase(),
                 path: routePath,
-                operationId: opId,
-                description: operation.description || '',
-                sourceCodeUrl: `${gitViewUrl}#L${findLineNumber(yamlContent, opId)}`,
+                operationId: opId || 'N/A',
                 customFields: []
             };
 

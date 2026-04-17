@@ -4,7 +4,8 @@ Automated tool to parse OpenAPI YAML specifications into sortable and filterable
 
 ## Usage
 ```bash
-npm run run -- <input-url> [output-file] [local-file]
+npm run run -- <input> [output-file]
 ```
 
-*Note: Supplying a `[local-file]` parameter activates dev mode. The file is parsed locally while the remote `<input-url>` is still used to build the GitHub/GitLab source code links.*
+* `<input>`: Can be a remote URL (e.g., `https://.../openapi.yaml`) or a local file path (e.g., `./sample.yaml`).
+* `[output-file]`: (Optional) The path to save the generated HTML. If omitted, the HTML is printed to the console.

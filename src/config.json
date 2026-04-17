@@ -1,5 +1,11 @@
 {
+  "snippet": false,
   "customColumns": [
+    {
+      "header": "Summary",
+      "path": "summary",
+      "type": "string"
+    },
     {
       "header": "User Stories (x-story)",
       "path": "x-story",
