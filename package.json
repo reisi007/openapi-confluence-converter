@@ -9,7 +9,7 @@
     "yaml": "^2.4.1"
   },
   "devDependencies": {
-    "repomix": "^1.13.1",
+    "repomix": "^1.14.1",
     "typescript": "^5.0.0"
   }
 }
