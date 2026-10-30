@@ -14,3 +14,14 @@ The script `import_gemini.mjs` is the definitive architect of this repository. *
 - **OpenAPI Extensions:** The canonical tag for Agile user stories is `x-story`.
 - **I/O Operations:** The CLI accepts exactly two parameters: 1) Input (URL or local path) and 2) Output (optional file path).
 - **Confluence Output:** Generated tables must integrate sorting and filtering capabilities. User Stories must be rendered as clean, comma-separated text.
+## Gates
+
+Regeln dieser Ebene. Was nur ein Verzeichnis betrifft, gehört in die
+`AGENTS.md` **dieses** Verzeichnisses — sie wird geladen, wenn eine Datei
+daraus gelesen wird.
+
+Ein Plan in `docs/plans/` beginnt mit `**Status:** Plan | In Arbeit | Done |
+Empfehlung, nicht implementiert`.
+
+Die kanonischen Agent-Regeln laufen über `ratchet` (Preset `agent-rules`):
+`ratchet check` vor jedem Commit und in der CI.
