@@ -4,4 +4,4 @@ onlyBuiltDependencies:
 # hono is transitive (repomix -> @hono/node-server) and has no patched
 # versions recorded in the advisories, so Dependabot cannot raise it itself.
 overrides:
-  hono: 4.13.5
+  hono: 4.13.14
